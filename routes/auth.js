@@ -49,6 +49,7 @@ router.post('/register', async (req, res) => {
       email,
       password: hashedPassword,
     };
+
     await usersCollection.insertOne(newUser);
 
     res.status(201).json({ message: 'Usuario registrado exitosamente', user: { id: newUserId, username, email } });

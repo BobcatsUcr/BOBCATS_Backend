@@ -16,11 +16,13 @@ const productsRoutes = require('./routes/products');
 const authRoutes = require('./routes/auth');
 const cartRoutes = require('./routes/cart');
 const favoriteRoutes = require('./routes/favorite');
+const purchaseHistoryRoutes = require('./routes/purchase-history');
 
 app.use('/api/products', productsRoutes);
 app.use('/api/users', authRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/favorite', favoriteRoutes);
+app.use('/api/purchase-history', purchaseHistoryRoutes);
 
 // Arrancar servidor
 app.listen(PORT, () => {
